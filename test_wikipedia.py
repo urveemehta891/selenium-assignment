@@ -12,7 +12,7 @@ PAGE_PREVIEW_TEXT_TO_CHECK = "In ancient Greek civilization, Nike was a goddess 
 
 def setup_module():
 	global driver
-	driver = webdriver.Chrome(executable_path="C:\\bin\\chromedriver.exe")
+	driver = webdriver.Chrome()
 	driver.implicitly_wait(3)
 	driver.get(BASE_URL)
 
