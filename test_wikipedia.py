@@ -46,6 +46,9 @@ def test_table_of_contents_hyperlinks():
 
 	# clicking on these links will onyl scroll to that part of the page,. instead, we are checking the h2 tag with the link sub text after removing the base link - if they match, the hyperlinks will work
 	for hyperlink in hyperlinks:
+		if not hyperlink:
+			assert False
+
 		subtext = hyperlink.split("#")
 
 		if len(subtext) == 1:
